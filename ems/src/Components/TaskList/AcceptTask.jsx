@@ -11,9 +11,9 @@ const AcceptTask = () => {
     <p className='text-sm mt-2'>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, ex.
     </p>
-    <div className='flex justify-between mt-3'>
-        <button className='bg-green-400 py-1 px-2 text-sm'>Mark as Submittted</button>
-        <button className='bg-red-400 py-1 px-2 text-sm'>Mark as Failed</button>
+    <div className='flex justify-between mt-4'>
+        <button className='bg-green-500 rounded font-medium py-1 px-2 text-xs'>Mark as Completed</button>
+        <button className='bg-red-500 rounded font-medium py-1 px-2 text-xs'>Mark as Failed</button>
     </div>
 </div>
   )
