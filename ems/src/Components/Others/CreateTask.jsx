@@ -1,9 +1,25 @@
 import React from 'react'
+import { useState } from 'react'
 
-function CreateTask() {
+const CreateTask = () => {
+
+    const [taskTitle, setTaskTitle] = useState('')
+    const [taskDescription, setTaskDescription] = useState('')
+    const [taskdate, setTaskdate] = useState('')
+    const [assignTo, setAssignTo] = useState('')
+    const [category, setCategory] = useState('')
+
+
+    const submitHandler = (e) =>{
+      e.preventDefault()
+      console.log("task created")
+    }
+
   return (
     <div className='p-5 bg-[#1c1c1c] mt-7 rounded'>
-            <form className='flex flex-wrap w-full items-start justify-between'>
+            <form onSubmit={(e)=>{
+              submitHandler(e)
+            }} className='flex flex-wrap w-full items-start justify-between'>
               <div className='w-1/2'>
               <div>
                 <h3 className='text-sm text-gray-300 mb-0.5'>Task Title</h3>
