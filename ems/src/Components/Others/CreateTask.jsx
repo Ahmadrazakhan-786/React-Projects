@@ -28,6 +28,7 @@ const CreateTask = () => {
         elem.taskNumbers.newTask = elem.taskNumbers.newTask+1
       }
      }) 
+     console.log(data);
 
      setTaskTitle('')
      setCategory('')
