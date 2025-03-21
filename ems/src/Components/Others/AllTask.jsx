@@ -1,7 +1,9 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../Context/AuthProvider'
+import { setLocalStorage } from '../../Utils/localStorage'
 
 const  AllTask = () =>{
+  // setLocalStorage.clear()
     
     const [userData, setuserData] = useContext(AuthContext)
     
