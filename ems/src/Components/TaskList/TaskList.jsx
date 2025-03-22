@@ -3,7 +3,7 @@ import AcceptTask from './AcceptTask'
 import NewTask from './NewTask'
 import CompleteTask from './CompleteTask'
 import FailedTask from './FailedTask'
-import OngoingTask from './OngoingTask'
+// import OngoingTask from './OngoingTask'
 
 const TaskList = ({data}) => {
     // console.log(data)
@@ -23,9 +23,9 @@ const TaskList = ({data}) => {
           if(elem.failedTask){
             return <FailedTask key={idx} data={elem}/>
           }
-          if(elem.ongoing){
-            return <OngoingTask key={idx} data={elem}/>
-          }
+          // if(elem.ongoing){
+          //   return <OngoingTask key={idx} data={elem}/>
+          // }
 
         })}
     </div>

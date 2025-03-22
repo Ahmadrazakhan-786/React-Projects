@@ -5,7 +5,7 @@ import { setLocalStorage } from '../../Utils/localStorage'
 const Header = (props) => {
 
   // const [username, setusername] = useState('')
-
+   
   // if(!data){
   //   setusername('Admin')
   // }else{
@@ -13,7 +13,7 @@ const Header = (props) => {
   // }
 
   const logOutUser = ()=>{
-    localStorage.setItem('loggedInUser','')
+    localStorage.setItem('loggedInUser', '')
     props.changeUser('')
     // window.location.reload()
   }

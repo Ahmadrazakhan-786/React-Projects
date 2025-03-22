@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { useState } from 'react'
+import React, { useContext, useState } from 'react'
+// import { useState } from 'react'
 import { AuthContext } from '../../Context/AuthProvider'
 
 const CreateTask = () => {
@@ -8,7 +8,7 @@ const CreateTask = () => {
 
     const [taskTitle, setTaskTitle] = useState('')
     const [taskDescription, setTaskDescription] = useState('')
-    const [taskdate, setTaskdate] = useState('')
+    const [taskDate, setTaskdate] = useState('')
     const [assignTo, setAssignTo] = useState('')
     const [category, setCategory] = useState('')
 
@@ -17,14 +17,14 @@ const CreateTask = () => {
     const submitHandler = (e) =>{
       e.preventDefault()
 
-     setNewTask({taskTitle, taskDescription, taskdate, category, active:false, newTask:true, failedTask:false, completedTask:false})
+     setNewTask({taskTitle, taskDescription, taskDate, category, active:false, newTask:true, failedTask:false, completedTask:false})
 
      const data = userData
 
      data.forEach(function(elem){
       if(assignTo == elem.firstName){
         elem.tasks.push(newTask)
-        elem.taskNumbers.newTask = elem.taskNumbers.newTask+1
+        elem.taskNumbers.newTask = elem.taskNumbers.newTask + 1
       }
      }) 
      setuserData(data)
@@ -59,7 +59,7 @@ const CreateTask = () => {
               <div>
                 <h3 className='text-sm text-gray-300 mb-0.5'>Date</h3>
                 <input
-                  value={taskdate}
+                  value={taskDate}
                   onChange={(e)=>{
                     setTaskdate(e.target.value)
                   }}
